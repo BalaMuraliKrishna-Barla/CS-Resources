@@ -1,0 +1,56 @@
+# MASTER DOCKER — 16 Essential Concepts
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+| No. | Docker Concept            | Purpose                                                                                                                |
+| --- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 01  | Containerization          | Packages an application and its dependencies into isolated containers                                                  |
+| 02  | Docker Architecture       | Explains how the Docker client, daemon, APIs, and registries work together                                             |
+| 03  | Docker Engine             | Builds and runs containers and manages Docker resources                                                                |
+| 04  | Docker Images             | Read-only templates used to create containers                                                                          |
+| 05  | Docker Containers         | Running or stopped instances of Docker images                                                                          |
+| 06  | Dockerfile                | Defines instructions to build a Docker image                                                                           |
+| 07  | Docker Image Layers       | Stores image changes in reusable layers to improve build efficiency                                                    |
+| 08  | Docker Volumes            | Persists data independently of a container's lifecycle                                                                 |
+| 09  | Bind Mounts               | Maps a specific host file or directory into a container                                                                |
+| 10  | Docker Networking         | Enables communication between containers and external systems                                                          |
+| 11  | Docker Bridge Network     | Connects containers through a virtual network, commonly on a single host                                               |
+| 12  | Docker Host Network       | Allows a container to use the host's network namespace                                                                 |
+| 13  | Docker Compose            | Defines and manages multi-container applications using a YAML file                                                     |
+| 14  | Docker Registry           | Stores and distributes Docker images                                                                                   |
+| 15  | Docker Hub and Amazon ECR | Docker Hub is a public/private image registry; Amazon Elastic Container Registry (ECR) is AWS's managed image registry |
+| 16  | Multi-Stage Builds        | Uses multiple build stages to create smaller, more efficient production images                                         |
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Recommended learning order ##
+
+Phase 1 — Fundamentals : Containerization, architecture, Docker Engine, images, containers, Dockerfile, image layers.
+
+Phase 2 — Data and networking : Volumes, bind mounts, networking, bridge network, host network.
+
+Phase 3 — Production workflows : Docker Compose, registries, Docker Hub, Amazon ECR, multi-stage builds.
+
+
+## Essential Docker commands to practice ##
+
+docker --version
+docker pull nginx
+docker images
+docker build -t my-app .
+docker run -d -p 8080:80 --name web nginx
+docker ps
+docker ps -a
+docker logs web
+docker exec -it web sh
+docker stop web
+docker start web
+docker rm web
+docker rmi nginx
+docker volume ls
+docker network ls
+docker compose up -d
+docker compose down
+
+
+Goal: Build a Docker image for a Node.js application, run it locally, connect it to a database using Docker Compose,
+      persist database data with a volume, and publish the image to Docker Hub or Amazon ECR. 
+      This is a strong practical foundation for DevOps and cloud deployment.
