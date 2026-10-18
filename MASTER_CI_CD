@@ -1,0 +1,39 @@
+# MASTER CI/CD — 12 Essential Concepts
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| No. | CI/CD Concept                                 | Purpose                                                                                                                           |
+| --- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| 01  | Continuous Integration (CI)                   | Frequently integrates code changes into a shared repository and validates them with automated builds and tests                    |
+| 02  | Continuous Delivery vs. Continuous Deployment | Continuous Delivery keeps changes ready for release; Continuous Deployment automatically releases validated changes to production |
+| 03  | CI/CD Pipeline Architecture                   | Describes how code moves through build, test, release, and deployment stages                                                      |
+| 04  | Pipeline as Code                              | Defines pipelines in version-controlled configuration files                                                                       |
+| 05  | Pipeline Stages and Jobs                      | Organizes pipeline tasks into stages and individual jobs that may run sequentially or in parallel                                 |
+| 06  | GitHub Actions                                | Automates workflows using YAML files, events, jobs, and runners                                                                   |
+| 07  | Jenkins                                       | An automation server used to build, test, and deploy applications                                                                 |
+| 08  | GitLab CI/CD                                  | Provides integrated pipeline automation using `.gitlab-ci.yml`                                                                    |
+| 09  | Pipeline Triggers and Webhooks                | Starts workflows in response to events such as code pushes, pull requests, or external notifications                              |
+| 10  | Automated Testing                             | Runs unit, integration, and other tests to catch defects before release                                                           |
+| 11  | Build Automation                              | Automatically compiles code, resolves dependencies, and packages applications                                                     |
+| 12  | Artifact Management                           | Stores, versions, and distributes build outputs such as JAR files, packages, and Docker images                                    |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Recommended learning order ##
+
+Phase 1 — CI/CD fundamentals : Continuous Integration → Delivery vs. Deployment → Pipeline Architecture → Pipeline as Code → Stages and Jobs
+
+Phase 2 — Pipeline tools : GitHub Actions → Jenkins → GitLab CI/CD → Triggers and Webhooks
+
+Phase 3 — Build and release : Automated Testing → Build Automation → Artifact Management
+
+## Example CI/CD pipeline ##
+
+1. Code Push : Developer pushes code to GitHub
+
+2. Build & Test : Install dependencies, build, run automated tests
+
+3. Package & Publish : Build a Docker image and publish it to a registry
+
+4. Deploy : Deploy to a test or production environment
+
+
+Practical goal: Build a complete pipeline for a Node.js application that runs tests, builds a Docker image, pushes it to Amazon ECR, and deploys it to AWS or Kubernetes. Start with GitHub Actions, then learn Jenkins and GitLab CI/CD to understand alternative implementations.
