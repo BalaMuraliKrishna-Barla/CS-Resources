@@ -1,0 +1,62 @@
+# MASTER KUBERNETES — 15 Essential Concepts
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| No. | Kubernetes Concept             | Purpose                                                                                                              |
+| --- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| 01  | Kubernetes Architecture        | Explains how Kubernetes components work together to deploy and manage containerized applications                     |
+| 02  | Control Plane and Worker Nodes | The control plane manages the cluster; worker nodes run application workloads                                        |
+| 03  | Pods                           | The smallest deployable units in Kubernetes, containing one or more containers                                       |
+| 04  | Namespaces                     | Organize and isolate resources within a Kubernetes cluster                                                           |
+| 05  | Deployments                    | Manage application rollouts, updates, and the desired number of replicas                                             |
+| 06  | ReplicaSets                    | Maintain a specified number of running Pod replicas                                                                  |
+| 07  | Services                       | Provide stable network access to a set of Pods                                                                       |
+| 08  | Ingress                        | Manages HTTP/HTTPS access to cluster services through an Ingress controller                                          |
+| 09  | Gateway API                    | Provides extensible, role-oriented APIs for managing application traffic routing                                     |
+| 10  | ConfigMaps                     | Store non-sensitive application configuration                                                                        |
+| 11  | Secrets                        | Store sensitive configuration, such as passwords and tokens; additional security controls are needed to protect them |
+| 12  | Persistent Volumes (PV)        | Represent storage resources available to a cluster                                                                   |
+| 13  | Persistent Volume Claims (PVC) | Let applications request persistent storage                                                                          |
+| 14  | StorageClasses                 | Define storage types and provisioning policies, often enabling dynamic volume creation                               |
+| 15  | Requests and Limits            | Configure the CPU and memory resources containers request and are allowed to use                                     |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Recommended learning order ## 
+
+Phase 1 — Understand the cluster : Kubernetes Architecture → Control Plane and Worker Nodes → Pods → Namespaces
+
+Phase 2 — Deploy and expose applications : Deployments → ReplicaSets → Services → Ingress → Gateway API
+
+Phase 3 — Configuration, storage, and resources : ConfigMaps → Secrets → PV → PVC → StorageClasses → Requests and Limits
+
+## Essential `kubectl` commands ##
+
+# Cluster information
+kubectl cluster-info
+kubectl get nodes
+
+# Pods and namespaces
+kubectl get pods
+kubectl get pods -A
+kubectl get namespaces
+
+# Deployments and services
+kubectl create deployment nginx --image=nginx
+kubectl get deployments
+kubectl scale deployment nginx --replicas=3
+kubectl expose deployment nginx --port=80 --type=ClusterIP
+kubectl get services
+
+# Inspect and troubleshoot
+kubectl describe pod <pod-name>
+kubectl logs <pod-name>
+kubectl exec -it <pod-name> -- sh
+
+# Apply configuration and clean up
+kubectl apply -f deployment.yaml
+kubectl delete -f deployment.yaml
+
+
+Practical goal: Deploy your Dockerized Node.js application to Kubernetes, run multiple replicas,  
+                expose it through a Service, configure it using a ConfigMap, and attach persistent storage.
+
+Important distinction: Learn `Ingress` first for traditional HTTP routing, then study the newer `Gateway API`. Gateway API is not simply another name for Ingress; they are distinct Kubernetes networking APIs.
