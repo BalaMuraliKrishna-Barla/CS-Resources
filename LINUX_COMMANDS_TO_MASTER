@@ -1,0 +1,60 @@
+# MASTER LINUX — 18 Essential Linux Commands
+
+----------------------------------------------------------
+| No. | Command | Purpose                                |
+| --- | ------- | -------------------------------------- |
+| 01  | `ls`    | List files and directories             |
+| 02  | `cd`    | Change directories                     |
+| 03  | `pwd`   | Print the current working directory    |
+| 04  | `mkdir` | Create directories                     |
+| 05  | `touch` | Create files or update timestamps      |
+| 06  | `cp`    | Copy files and directories             |
+| 07  | `mv`    | Move or rename files and directories   |
+| 08  | `rm`    | Remove files and directories           |
+| 09  | `cat`   | Display file contents                  |
+| 10  | `less`  | Read files page by page                |
+| 11  | `grep`  | Search text using patterns             |
+| 12  | `find`  | Find files and directories             |
+| 13  | `chmod` | Change file and directory permissions  |
+| 14  | `chown` | Change file and directory ownership    |
+| 15  | `ps`    | Display process information            |
+| 16  | `top`   | Monitor running processes in real time |
+| 17  | `kill`  | Send signals to processes              |
+| 18  | `df`    | Check filesystem disk space            |
+----------------------------------------------------------
+
+
+## Quick command examples ##
+
+    
+    01. ls -la
+    02. cd /home/user
+    03. pwd
+    04. mkdir projects
+    05. touch file.txt
+    06. cp file.txt backup.txt
+    07. mv old.txt new.txt
+    08. rm file.txt
+    09. cat file.txt
+    10. less file.txt
+    11. grep "error" app.log
+    12. find . -name "*.txt"
+    13. chmod 755 script.sh
+    14. sudo chown user:user file.txt
+    15. ps aux
+    16. top
+    17. kill <PID>
+    18. df -h
+
+
+## Important notes ##
+
+- `ls -la` shows hidden files and detailed file information.
+- `cp -r` copies directories recursively.
+- `rm -r` removes directories and their contents. Use it carefully.
+- `grep -i` searches without case sensitivity.
+- `chmod 755` grants the owner read/write/execute permissions and others read/execute permissions.
+- `df -h` displays disk usage in human-readable units.
+- `kill <PID>` sends a termination signal by default; use `kill -9 <PID>` only when necessary.
+
+Recommended learning order: Start with navigation (`ls`, `cd`, `pwd`), learn file operations (`mkdir`, `touch`, `cp`, `mv`, `rm`), then practice searching, permissions, and process management.
