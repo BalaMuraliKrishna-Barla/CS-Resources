@@ -1,0 +1,42 @@
+# MASTER AWS — 12 Essential AWS Services
+
+-----------------------------------------------------------------------------------------------------------------------
+| No. | AWS Service                  | Purpose                                                                        |
+| --- | ---------------------------- | ------------------------------------------------------------------------------ |
+| 01  | Amazon EC2                   | Provides virtual servers to run applications                                   |
+| 02  | Amazon S3                    | Stores files, images, backups, and other objects                               |
+| 03  | AWS IAM                      | Manages users, roles, permissions, and access control                          |
+| 04  | Amazon VPC                   | Creates an isolated virtual network for AWS resources                          |
+| 05  | Amazon EBS                   | Provides persistent block storage for EC2 instances                            |
+| 06  | Elastic Load Balancing (ELB) | Distributes incoming traffic across multiple targets                           |
+| 07  | EC2 Auto Scaling             | Automatically adjusts the number of EC2 instances based on demand and policies |
+| 08  | Amazon Route 53              | Provides DNS, domain routing, and health-check capabilities                    |
+| 09  | Amazon RDS                   | Manages relational databases such as PostgreSQL and MySQL                      |
+| 10  | Amazon DynamoDB              | Provides a managed NoSQL key-value and document database                       |
+| 11  | AWS Lambda                   | Runs code without managing servers                                             |
+| 12  | Amazon EKS                   | Runs and manages Kubernetes workloads on AWS                                   |
+-----------------------------------------------------------------------------------------------------------------------
+
+## Quick memory guide ##
+
+------------------------------------------------
+| Category                | Services           |
+| ----------------------- | ------------------ |
+| Compute                 | EC2, Lambda        |
+| Storage                 | S3, EBS            |
+| Networking              | VPC, ELB, Route 53 |
+| Security                | IAM                |
+| Scaling                 | EC2 Auto Scaling   |
+| Databases               | RDS, DynamoDB      |
+| Containers & Kubernetes | EKS                |
+------------------------------------------------
+
+## Recommended learning order ##
+
+1. Foundations: IAM → VPC
+2. Compute and storage: EC2 → EBS → S3
+3. Networking and scaling: ELB → Auto Scaling → Route 53
+4. Databases: RDS → DynamoDB
+5. Modern application deployment: Lambda → EKS
+
+For hands-on practice, start by deploying a simple Node.js application on EC2, storing files in S3, and learning how IAM permissions and VPC networking control access. This gives you a practical foundation for cloud and DevOps work.
